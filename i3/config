@@ -231,7 +231,7 @@ bindsym XF86AudioLowerVolume  exec amixer -q sset Master 5%- unmute
 bindsym XF86AudioMute exec amixer -q sset Master toggle
 
 #adding lock feature
-bindsym $mod+shift+x exec i3lock -c 101218
+bindsym $mod+shift+x exec /home/aditya/.config/i3/lock.sh
 
 #execute default apps
 exec firefox 
