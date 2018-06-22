@@ -231,10 +231,10 @@ bindsym XF86AudioLowerVolume  exec amixer -q sset Master 5%- unmute
 bindsym XF86AudioMute exec amixer -q sset Master toggle
 
 #screenshot
-#bindsym --release Print exec scrot '/home/aditya/Pictures/screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'
-#bindsym --release Shift+Print exec scrot -s '/home/aditya/Pictures/screenshots/%s_%H%M_%d%m%Y_$wx$h.png'
-#bindsym --release $mod+Shift+Print exec scrot -u -d 4 '/home/aditya/Pictures/screenshots/%s_%H%M_%d%m%Y_$wx$h.png'
-bindsym --release Print exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Pictures/Screenshots/'
+bindsym --release Print exec scrot '/home/aditya/Pictures/Screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'
+bindsym --release Shift+Print exec scrot -s '/home/aditya/Pictures/Screenshots/%s_%H%M_%d%m%Y_$wx$h.png'
+bindsym --release $mod+Shift+Print exec scrot -u -d 4 '/home/aditya/Pictures/Screenshots/%s_%H%M_%d%m%Y_$wx$h.png'
+#bindsym --release Print exec scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Pictures/Screenshots/'
 
 #adding lock feature
 bindsym $mod+shift+x exec /home/aditya/.config/i3/lock.sh
