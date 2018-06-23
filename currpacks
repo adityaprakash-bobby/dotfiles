@@ -102,6 +102,7 @@ atlas.x86_64
 atlas-devel.x86_64
 atmel-firmware.noarch
 attr.x86_64
+audiofile.x86_64
 audit.x86_64
 audit-libs.x86_64
 augeas-libs.x86_64
@@ -443,6 +444,7 @@ gdbm-libs.x86_64
 gdisk.x86_64
 gdk-pixbuf2.x86_64
 gdk-pixbuf2-modules.x86_64
+gdk-pixbuf2-xlib.x86_64
 gdm.x86_64
 gdouros-symbola-fonts.noarch
 gedit.x86_64
@@ -858,6 +860,7 @@ java-1.8.0-openjdk-headless.x86_64
 javapackages-tools.noarch
 jbig2dec-libs.x86_64
 jbigkit-libs.x86_64
+jemalloc.x86_64
 jimtcl.x86_64
 jomolhari-fonts.noarch
 js-jquery.noarch
@@ -1066,13 +1069,9 @@ libgexiv2.x86_64
 libgfortran.x86_64
 libgltf.x86_64
 libglvnd.x86_64
-@fedora
 libglvnd-egl.x86_64
-@fedora
 libglvnd-gles.x86_64
-@fedora
 libglvnd-glx.x86_64
-@fedora
 libgnome-keyring.x86_64
 libgnomekbd.x86_64
 libgomp.x86_64
@@ -1092,6 +1091,7 @@ libhangul.x86_64
 libibverbs.x86_64
 libical.x86_64
 libicu.x86_64
+libid3tag.x86_64
 libidn.x86_64
 libidn2.x86_64
 libiec61883.x86_64
@@ -1127,6 +1127,7 @@ libmediaart.x86_64
 libmetalink.x86_64
 libmfx.x86_64
 libmicrodns.x86_64
+libmikmod.x86_64
 libmimic.x86_64
 libmms.x86_64
 libmng.x86_64
@@ -1259,6 +1260,7 @@ libsemanage.x86_64
 libsepol.x86_64
 libsepol-devel.x86_64
 libshout.x86_64
+libsidplayfp.x86_64
 libsigc++20.x86_64
 libsigsegv.x86_64
 libsmartcols.x86_64
@@ -1330,15 +1332,15 @@ libvirt-daemon-driver-storage.x86_64
 libvirt-daemon-driver-storage-core.x86_64
 libvirt-daemon-driver-storage-disk.x86_64
 libvirt-daemon-driver-storage-gluster.x86_64
-4.1.0-2.fc28
+4.1.0-3.fc28
 libvirt-daemon-driver-storage-iscsi.x86_64
 libvirt-daemon-driver-storage-logical.x86_64
-4.1.0-2.fc28
+4.1.0-3.fc28
 libvirt-daemon-driver-storage-mpath.x86_64
 libvirt-daemon-driver-storage-rbd.x86_64
 libvirt-daemon-driver-storage-scsi.x86_64
 libvirt-daemon-driver-storage-sheepdog.x86_64
-4.1.0-2.fc28
+4.1.0-3.fc28
 libvirt-daemon-driver-storage-zfs.x86_64
 libvirt-daemon-kvm.x86_64
 libvirt-gconfig.x86_64
@@ -1370,6 +1372,7 @@ libxcb.x86_64
 libxcb-devel.x86_64
 libxcrypt.x86_64
 libxcrypt-devel.x86_64
+libxdo.x86_64
 libxkbcommon.x86_64
 libxkbcommon-x11.x86_64
 libxkbfile.x86_64
@@ -1449,6 +1452,7 @@ mariadb-common.x86_64
 mariadb-config.x86_64
 mariadb-connector-c.x86_64
 mariadb-connector-c-devel.x86_64
+mariadb-cracklib-password-check.x86_64
 mariadb-errmsg.x86_64
 mariadb-gssapi-server.x86_64
 mariadb-rocksdb-engine.x86_64
@@ -1485,6 +1489,7 @@ mozilla-filesystem.x86_64
 mozjs38.x86_64
 mozjs52.x86_64
 mpage.x86_64
+mpd.x86_64
 mpfr.x86_64
 mpg123-libs.x86_64
 mtdev.x86_64
@@ -1503,6 +1508,7 @@ ncurses-base.noarch
 ncurses-c++-libs.x86_64
 ncurses-devel.x86_64
 ncurses-libs.x86_64
+neofetch.noarch
 neon.x86_64
 net-snmp-libs.x86_64
 net-tools.x86_64
@@ -1638,6 +1644,7 @@ perl-MIME-Base64.x86_64
 perl-Math-BigInt.noarch
 perl-Math-Complex.noarch
 perl-Mozilla-CA.noarch
+perl-NKF.x86_64
 perl-Net-SSLeay.x86_64
 perl-PathTools.x86_64
 perl-Pod-Escapes.noarch
@@ -1763,6 +1770,7 @@ python2-pexpect.noarch
 python2-pickleshare.noarch
 python2-pip.noarch
 python2-prompt_toolkit.noarch
+python2-psutil.x86_64
 python2-ptyprocess.noarch
 python2-pygments.noarch
 python2-repoze-lru.noarch
@@ -2079,6 +2087,7 @@ telepathy-filesystem.noarch
 telepathy-glib.x86_64
 telepathy-logger.x86_64
 telnet.x86_64
+terminator.noarch
 texinfo.x86_64
 texlive-ae.noarch
 texlive-algorithms.noarch
@@ -2350,7 +2359,7 @@ urw-base35-nimbus-roman-fonts.noarch
 urw-base35-nimbus-sans-fonts.noarch
 urw-base35-p052-fonts.noarch
 urw-base35-standard-symbols-ps-fonts.noarch
-20170801-9.fc28
+20170801-10.fc28
 urw-base35-z003-fonts.noarch
 usb_modeswitch.x86_64
 usb_modeswitch-data.noarch
@@ -2384,6 +2393,8 @@ vte-profile.x86_64
 vte291.x86_64
 vulkan.x86_64
 vulkan-filesystem.noarch
+w3m.x86_64
+w3m-img.x86_64
 wavpack.x86_64
 web-assets-filesystem.noarch
 webkit2gtk3.x86_64
@@ -2427,6 +2438,7 @@ xdg-desktop-portal-gtk.x86_64
 xdg-user-dirs.x86_64
 xdg-user-dirs-gtk.x86_64
 xdg-utils.noarch
+xdotool.x86_64
 xemacs-filesystem.noarch
 @fedora
 xen-libs.x86_64
