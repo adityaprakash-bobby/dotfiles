@@ -290,6 +290,7 @@ dracut-config-rescue.x86_64
 dracut-live.x86_64
 dracut-network.x86_64
 drpm.x86_64
+dunst.x86_64
 dwz.x86_64
 dzen2.x86_64
 e2fsprogs.x86_64
@@ -917,6 +918,7 @@ libX11.x86_64
 libX11-common.noarch
 libX11-devel.x86_64
 libX11-xcb.x86_64
+libXScrnSaver.x86_64
 libXau.i686
 libXau.x86_64
 libXau-devel.x86_64
@@ -1372,6 +1374,7 @@ libxcb.x86_64
 libxcb-devel.x86_64
 libxcrypt.x86_64
 libxcrypt-devel.x86_64
+libxdg-basedir.x86_64
 libxdo.x86_64
 libxkbcommon.x86_64
 libxkbcommon-x11.x86_64
@@ -1744,6 +1747,7 @@ pulseaudio-module-x11.x86_64
 pulseaudio-utils.x86_64
 pygobject2.x86_64
 pygtk2.x86_64
+python-jsonpath-rw-ext-doc.noarch
 python-matplotlib-data.noarch
 python-matplotlib-data-fonts.noarch
 python-rpm-macros.noarch
