@@ -1,121 +1,86 @@
-!URxvt.font: xft:monospace:size=10
-!URxvt.letterSpace: -1
-!URxvt.scrollBar: false
-!###################################################################################################################
-!########################################  lovelybacon.deviantart.com  #############################################
-!###################################################################################################################
+urxvt.scrollBar: false
+!urxvt.transparent: true
+!urxvt.shading: 20
+
+!urxvt.tintColor: #172A47
+!urxvt.inheritPixmap: true
+urxvt.depth: 32
+
+urxvt.keysym.Control-Shift-V: perl:clipboard:paste
+urxvt.keysym.Control-Shift-C: perl:clipboard:copy
+
+urxvt.iso14755: False
+
+urxvt.perl-ext-common: default,clipboard
+
+!Fonts
+
+urxvt.font: xft:Monospace:pixelsize=10,style=regular
+urxvt.boldFont: xft:Monospace:pixelsize=10,style=bold
+urxvt.letterSpace: -1
 
 
+Xft.dpi: 96	
+Xft.antialias: true
+!Xft.rbga: none
+Xft.hintstyle: hintfull
+Xft.hinting: true
 
-!###################################################################################################################
-!##################################################  Fonts  ########################################################
-
-URxvt*font:				xft:inconsola:pixelsize=12,style=regular
-URxvt*boldFont:				xft:inconsola:pixelsize=12, style=regular
-URxvt*letterSpace:			-2
-URxvt*allow_bold:			true
+*.internalBorder: 13
 
 
-!###################################################################################################################
-!##################################################  Colors  #######################################################
+! special
+!urxvt.foreground:   #placeholder
+!doesnt work because urxvt.transparent and tintcolor
 
-*.foreground:   #c6c6c6
-*.background:   #1f1f1f
-*.cursorColor:  #c6c6c6
+! special
+!*.foreground:   #70ef6e
+!*.foreground: #99ddff
+*.foreground: #8aeff4
 
-*.color0:       #828282
-*.color8:       #828282
-*.color1:       #cc6666
-*.color9:       #cc6666
-*.color2:       #81a2be
-*.color10:      #81a2be
-*.color3:       #f0c674
-*.color11:      #f0c674
-*.color4:       #81a2be
-*.color12:      #81a2be
-*.color5:       #b294bb
-*.color13:      #b294bb
-*.color6:       #8abeb7
-*.color14:      #8abeb7
-*.color7:       #c5c8c6
-*.color15:      #c5c8c6
-
-*fading:                15
-*fadeColor:             black
-*pointerColorBackground:#2B2C2B
-*pointerColorForeground:#16A085
+!HOLY SHIT IT WORKS
+!*.background:   [75]#172a47
+*.background: [75]#0b2545
+*.cursorColor:  #8aeff4
 
 
 
 
+! 1
+*.color0:       #5959af
+*.color8:       #333399
 
-Xcursor.theme: Breeze
-Xcursor.size:  0
+! 2
+*.color1:       #7575c6
+*.color9:       #6666cc
 
-!###################################################################################################################
-!###########################################  Enable link support  #################################################
+! 3 - Green 
+*.color2: 		#82ff80
+!	Name modifier
+*.color10:      #82ff80
 
-URxvt.perl-ext-common:			default,matcher,tabbedex,vtwheel,clipboard
-!URxvt.matcher.button:			1
-URxvt.perl-ext:				default,url-select
-URxvt.keysym.M-u:			perl:url-select:select_next
-URxvt.url-select.launcher:		/usr/bin/google-chrome
-URxvt.url-select.underline:		true
+! 4 -
+*.color3:       #6be5cb
 
-
-!###################################################################################################################
-!###############################################  Disable bell  ####################################################
-
-URxvt.insecure: 			false
+*.color11:      #6be5cb
 
 
-!###################################################################################################################
-!###################################3#####  Copy / paste keybindings  ##############################################
-
-URxvt.keysym.M-c: 			perl:clipboard:copy
-URxvt.keysym.M-v: 			perl:clipboard:pasteq
-
-
-!###################################################################################################################
-!###########################################  Scrollbar / cursor  ##################################################
-
-URxvt*saveLines: 			300000
-URxvt.scrollBar: 			false
-!URxvt*scrollstyle:			plain
-URxvt*cursorBlink: 			false
-URxvt*cursorUnderline: 		        true
-URxvt*cursorColor: 			#51c4d4
+! 5 -
+*.color4:       #72afff
+!FOLDERS
+*.color12:      #72afff
 
 
-!###################################################################################################################
-!##################################################  Tabs  #########################################################
+! 6 - 
+*.color5:       #7cdcff
+*.color13:      #7cdcff
 
-URxvt.tabbedex.autohide:		yes
-URxvt.tabbedex.tabbar-fg:		2
-URxvt.tabbedex.tabbar-bg:		0
-URxvt.tabbedex.tab-fg:			10
-URxvt.tabbedex.tab-bg:			0
-URxvt.tabbedex.title:			yes
-URxvt.tabbedex.new-button:		no
+! cyan
+*.color6:       #c7ff96
+*.color14:      #c7ff96
 
-
-!###################################################################################################################
-!#############################################  Toggle fullscreen  #################################################
-
-URxvt.keysym.F11: 			perl:fullscreen:switch
-
-!###################################################################################################################
-!#################################################  Geometry  ######################################################
-
-URxvt.geometry: 1200x80
-
-
-urxvt*depth: 32
-urxvt*background: rgba:0000/0000/0200/c800
-
-urxvt*transparent: true
-urxvt*shading: 30
-
-
+! white (directory thing in username header)
+*.color7:       #cdffcc
+*.color15:      #cdffcc
 
 
