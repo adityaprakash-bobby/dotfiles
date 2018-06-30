@@ -253,7 +253,7 @@ exec gnome-terminal
 exec_always compton -f
 
 #for_window [class = "Firefox"] floating enable
-
+for_window [class="^.*"] border pixel 0 
 #gaps
 #gaps inner 10
 #gaps outer 0
