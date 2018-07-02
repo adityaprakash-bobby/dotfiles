@@ -46,7 +46,7 @@ font pango:System San Francisco Display 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec urxvt
 
 
 # kill focused window
@@ -112,9 +112,9 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 ""
-set $ws2 ""
-set $ws3 "3"
+set $ws2 ""
+set $ws3 ""
+set $ws1 ""
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -148,8 +148,8 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 #default workspaces for applications
-assign [class="Firefox"] $ws2
-assign [class="Gnome-terminal"] $ws1
+assign [class="Firefox"] $ws3
+assign [class="URxvt"] $ws2
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -222,7 +222,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #}
 
 #set wallpaper
-exec --no-startup-id feh --bg-scale /home/aditya/Downloads/dark.jpg
+exec --no-startup-id feh --bg-scale $HOME/Downloads/wallpaper_tardis.jpg
 
 #execute conky
 exec --no-startup-id conky -c /home/aditya/.conkyrc
@@ -247,7 +247,7 @@ bindsym $mod+shift+x exec /home/aditya/.config/i3/lock.sh
 
 #execute default apps
 exec firefox 
-exec gnome-terminal
+exec urxvt
 
 #starting compton 
 exec_always compton -f
@@ -255,7 +255,7 @@ exec_always compton -f
 #for_window [class = "Firefox"] floating enable
 for_window [class="^.*"] border pixel 0 
 #gaps
-#gaps inner 10
-#gaps outer 0
-#bindsym $mod+o gaps outer current set 0; gaps inner current set 10
-#bindsym $mod+i gaps outer current set 20; gaps inner current set 20
+gaps inner 10
+gaps outer 0
+bindsym $mod+o gaps outer current set 0; gaps inner current set 10
+bindsym $mod+i gaps outer current set 20; gaps inner current set 20
