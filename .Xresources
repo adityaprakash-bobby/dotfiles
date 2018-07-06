@@ -34,13 +34,13 @@ Xft.hinting: true
 !doesnt work because urxvt.transparent and tintcolor
 
 ! special
-!*.foreground:   #70ef6e
+*.foreground:   #70ef6e
 !*.foreground: #99ddff
-*.foreground: #8aeff4
+!*.foreground: #8aeff4
 
 !HOLY SHIT IT WORKS
-!*.background:   [75]#172a47
-*.background: [75]#0b2545
+*.background:   [100]#172a47
+!*.background: [75]#0b2545
 *.cursorColor:  #8aeff4
 
 
