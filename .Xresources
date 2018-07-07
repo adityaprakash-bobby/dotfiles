@@ -15,9 +15,13 @@ urxvt.perl-ext-common: default,clipboard
 
 !Fonts
 
-urxvt.font: xft:Monospace:pixelsize=10,style=regular
-urxvt.boldFont: xft:Monospace:pixelsize=10,style=bold
-urxvt.letterSpace: -1
+!urxvt.font: xft:Monospace:pixelsize=10,style=regular
+!urxvt.boldFont: xft:Monospace:pixelsize=10,style=bold
+!URxvt*font:  xft:inconsolata:size=10:antialias=true,xft:DejaVu Sans:size=10:antialias=true,xft:Sauce Code Powerline:antialias=true:hinting=true:size=9
+urxvt*font: xft:Inconsolata\ for\ Powerline:size=9, xft:Terminus:size=9
+urxvt*boldFont: xft:Inconsolata\ for\ Powerline:size=9, xft:Terminus:size=9
+urxvt.letterSpace: 1
+!urxvt.letterSpace: 2
 
 
 Xft.dpi: 96	
