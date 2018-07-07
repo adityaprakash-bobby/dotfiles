@@ -46,7 +46,7 @@ font pango:System San Francisco Display 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec terminator
 
 
 # kill focused window
@@ -112,9 +112,9 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws2 ""
-set $ws3 ""
-set $ws1 ""
+set $ws2 "2: "
+set $ws3 "3: "
+set $ws1 "1: "
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -150,6 +150,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 #default workspaces for applications
 assign [class="Firefox"] $ws3
 assign [class="URxvt"] $ws2
+assign [class="Terminator"] $ws2
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -222,10 +223,10 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #}
 
 #set wallpaper
-exec --no-startup-id feh --bg-scale $HOME/Downloads/wallpaper_tardis.jpg
+exec --no-startup-id feh --bg-scale $HOME/Pictures/Wallpapers/alena-aenami-lines1k.jpg
 
 #execute conky
-exec --no-startup-id conky -c /home/aditya/.conkyrc
+#exec --no-startup-id conky -c /home/aditya/.conkyrc
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5%+ # increase screen brightness
@@ -247,10 +248,13 @@ bindsym $mod+shift+x exec /home/aditya/.config/i3/lock.sh
 
 #execute default apps
 exec firefox 
-exec urxvt
+exec terminator
 
 #starting compton 
 exec_always compton -f
+
+#start nm-applet 
+#exec --no-startup-id nm-applet
 
 #for_window [class = "Firefox"] floating enable
 for_window [class="^.*"] border pixel 0 

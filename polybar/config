@@ -33,8 +33,10 @@ offset-x = 0%
 radius = 0.0
 fixed-center = true
 
-background = ${colors.background}
-foreground = ${colors.foreground}
+;background = #000
+;foreground = ${colors.foreground}
+background = #00282a36
+foreground = #f9f9f9
 
 line-size = 0
 line-color = #f00
@@ -62,7 +64,7 @@ modules-left = i3
 modules-center =  date weather
 modules-right =    wireless-network volume battery powermenu
 
-tray-position = hidden
+tray-position = right
 tray-padding = 11
 tray-transparent = true
 tray-offset-y = 22
@@ -79,15 +81,15 @@ wm-restack = i3
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
 
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
 
 
 [module/weather]
 type = custom/script
 interval = 60
 
-;format-background = ${colors.background-alt}
+format-background = ${colors.background-alt}
 format = <label>
 format-prefix = "    "
 format-suffix = "   "
@@ -111,13 +113,14 @@ exec = python3 ~/.config/polybar/weather.py
 
 type = internal/i3
 ;
-;strip-wsnumbers = true
+strip-wsnumbers = true
 ;
 ;label-focused-padding = 3
 ;label-unfocused-padding = 3
 ;
 ;label-focused-background = ${colors.background-alt}
-label-unfocused-background = ${colors.background-unf}
+label-unfocused-background = #00067212
+;${colors.background-unf}
 ;
 ;label-mode-padding = 0
 ;label-mode-background = ${colors.background-unf}
@@ -159,7 +162,8 @@ label-unfocused-padding = 4
 ;   %index%
 ; Default: %icon%  %name%
 label-visible = %name%
-label-visible-underline = #555555
+label-visible-underline = #39aad3
+;#555555
 label-visible-padding = 4
 
 ; Available tokens:
@@ -228,6 +232,7 @@ date-alt = " %Y-%m-%d"
 time = "   %a %b %d     %I:%M %p  "
 time-alt = %H:%M:%S
 
+format-background = ${colors.background-alt}
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
@@ -356,10 +361,10 @@ menu-3-1-exec = menu-open-0
 
 [settings]
 screenchange-reload = true
-;compositing-background = xor
+compositing-background = xor
 ;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
+compositing-foreground = source
+compositing-border = over
 
 
 [global/wm]
