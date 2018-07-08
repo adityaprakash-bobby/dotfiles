@@ -125,6 +125,7 @@ baobab.x86_64
 basesystem.noarch
 bash.x86_64
 bash-completion.noarch
+battray.noarch
 bc.x86_64
 bcache-tools.x86_64
 beignet.x86_64
