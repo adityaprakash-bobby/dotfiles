@@ -229,8 +229,12 @@ exec --no-startup-id feh --bg-scale $HOME/Pictures/Wallpapers/alena-aenami-lines
 #exec --no-startup-id conky -c /home/aditya/.conkyrc
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5%+ # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5%- # decrease screen brightness
+#bindsym XF86MonBrightnessUp exec xbacklight -inc 5%+ # increase screen brightness
+#bindsym XF86MonBrightnessDown exec xbacklight -dec 5%- # decrease screen brightness
+bindsym XF86MonBrightnessUp exec "light -A 5
+#; notify-send 'brightness up'" # increase screen brightness with notification
+bindsym XF86MonBrightnessDown exec "light -U 5
+#; notify-send 'brightness down'" # decrease screen brightness with notification
 
 #volume keys
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+ unmute
