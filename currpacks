@@ -2196,6 +2196,7 @@ sssd-krb5-common.x86_64
 sssd-ldap.x86_64
 sssd-nfs-idmap.x86_64
 sssd-proxy.x86_64
+stalonetray.x86_64
 startup-notification.x86_64
 stix-fonts.noarch
 stoken-libs.x86_64
