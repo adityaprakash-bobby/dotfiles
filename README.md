@@ -9,3 +9,4 @@ This is a repo containing my dotfiles.
 -----------------------------------------------------------------------------------------------------------------------------------
 
 ![setup](https://raw.githubusercontent.com/adityaprakash-bobby/dotfiles/master/images/1531150841_2110_09.07.2018_1366x768.png)
+![setup](https://raw.githubusercontent.com/adityaprakash-bobby/dotfiles/master/images/1531150843_2110_09.07.2018_1366x768.png)
