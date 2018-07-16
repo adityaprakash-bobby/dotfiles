@@ -7,8 +7,12 @@ killall -q polybar
 while pgrep -x polybar >/dev/null; do sleep 1; done
 
 # Launch upperbar
-polybar  PolybarTony &
-
+if xrandr | grep "HDMI-1 connected"; then
+	MONITOR=HDMI-1 polybar PolybarTony &
+	MONITOR=eDP-1 polybar PolybarTony &
+else
+	MONITOR=eDP-1 polybar PolybarTony &
+fi
 
 echo "Bar launched..."
 
