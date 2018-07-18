@@ -25,7 +25,7 @@ secondary = #F3F3BA
 
 
 [bar/PolybarTony]
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:MONITOR:}
 width = 100%
 height = 20
 offset-x = 0%
@@ -62,7 +62,7 @@ font-2 = sm4tik:pixelsize=10;1
 modules-left = i3 
 ;music
 modules-center =  date weather
-modules-right =    wireless-network volume battery powermenu
+modules-right = alsa cpu wireless-network battery powermenu
 
 tray-position = right
 tray-padding = 11
@@ -197,6 +197,9 @@ format-disconnected-background = ${colors.background-unf}
 ;label-disconnected = %ifname% disconnected
 label-disconnected-foreground = ${colors.foreground-alt}
 
+format-packetloss = <animation-packetloss> <label-connected>
+
+
 ramp-signal-0 = "    0%"
 ramp-signal-1 = "    25%"
 ramp-signal-2 = "    50%"
@@ -204,6 +207,12 @@ ramp-signal-3 = "    75%"
 ramp-signal-4 = "    100%"
 ramp-signal-foreground = ${colors.foreground-alt}
 
+animation-packetloss-0 = ⚠
+animation-packetloss-0-foreground = #ffa64c
+animation-packetloss-1 = 📶
+animation-packetloss-1-foreground = #000000
+; Framerate in milliseconds
+animation-packetloss-framerate = 500
 
 [module/wired-network]
 type = internal/network
@@ -282,6 +291,40 @@ label-muted = "   mute   "
 ;label-muted = "          "
 
 ; Only applies if <ramp-volume> is used
+ramp-volume-0 = 
+ramp-volume-1 = 
+
+[module/alsa]
+type = internal/alsa
+
+format-volume = <label-volume> <ramp-volume>
+;format-volume = <label-volume> <bar-volume>
+label-volume = 
+format-foreground = ${colors.foreground-alt}
+format-volume-background = ${colors.background-alt}
+format-muted-prefix = " "
+format-muted-background = ${colors.background-alt}
+
+;label-muted = 🔇 muted
+label-muted =  muted
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = #ffffff
+
 ramp-volume-0 = 
 ramp-volume-1 = 
 
@@ -402,7 +445,7 @@ margin-bottom = 5
 ;
 ;[module/xbacklight]
 ;type = internal/xbacklight
-;
+
 ;format = <label> <bar>
 ;label = BL
 ;
@@ -423,13 +466,13 @@ margin-bottom = 5
 ;type = internal/backlight
 ;card = intel_backlight
 ;
-;[module/cpu]
-;type = internal/cpu
-;interval = 2
-;format-prefix = " "
-;format-prefix-foreground = ${colors.foreground-alt}
-;format-prefix-background = ${colors.foreground-mod}
-;format-underline = #f90000
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-background = ${colors.foreground-mod}
+format-underline = #f90000
 ;label = %percentage%%
 ;
 ;[module/memory]
