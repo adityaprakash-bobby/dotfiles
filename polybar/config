@@ -27,7 +27,7 @@ secondary = #F3F3BA
 [bar/PolybarTony]
 monitor = ${env:MONITOR:}
 width = 100%
-height = 20
+height = 23
 offset-x = 0%
 ;offset-y = 10%
 radius = 0.0
@@ -35,10 +35,10 @@ fixed-center = true
 
 ;background = #000
 ;foreground = ${colors.foreground}
-background = #00282a36
+background = #50000000
 foreground = #f9f9f9
 
-line-size = 0
+line-size = 3 
 line-color = #f00
 
 border-size = 0
@@ -64,14 +64,14 @@ modules-left = i3
 modules-center =  date weather
 modules-right = alsa cpu wireless-network battery powermenu
 
-tray-position = right
-tray-padding = 11
-tray-transparent = true
-tray-offset-y = 22
-tray-offset-x = -0
-tray-maxsize = 18
-tray-detached = true
-;tray-background = #0063ff
+;tray-position = left
+;tray-padding = 2
+;tray-transparent = true
+;tray-offset-y = 22
+;tray-offset-x = -0
+;tray-maxsize = 18
+;tray-detached = false
+;tray-background = #ff0000
 
 ;wm-restack = bspwm
 wm-restack = i3
@@ -89,7 +89,7 @@ scroll-down = i3wm-wsprev
 type = custom/script
 interval = 60
 
-format-background = ${colors.background-alt}
+format-background = #50000000
 format = <label>
 format-prefix = "    "
 format-suffix = "   "
@@ -119,7 +119,7 @@ strip-wsnumbers = true
 ;label-unfocused-padding = 3
 ;
 ;label-focused-background = ${colors.background-alt}
-label-unfocused-background = #00067212
+label-unfocused-background = #50000000
 ;${colors.background-unf}
 ;
 ;label-mode-padding = 0
@@ -144,8 +144,8 @@ label-mode-background = #e60053
 ; Default: %icon%  %name%
 label-focused = %name%
 label-focused-foreground = #ffffff
-label-focused-background = ${colors.background-alt}
-label-focused-underline = #fba922
+label-focused-background = #5058b1dd
+label-focused-underline = #58b1dd
 label-focused-padding = 4
 
 ; Available tokens:
@@ -172,8 +172,9 @@ label-visible-padding = 4
 ;   %index%
 ; Default: %icon%  %name%
 label-urgent = %name%
-label-urgent-foreground = #000000
-label-urgent-background = ${colors.background-alrt}
+label-urgent-foreground = #ffffff
+label-urgent-background = #50f9bd68
+label-urgent-underline = #ffb449
 label-urgent-padding = 4
 
 
@@ -186,9 +187,10 @@ interval = 3.0
 
 format-connected-prefix = " "
 
-format-connected-background = ${colors.background-alt}
-format-connected = "   <ramp-signal> <label-connected>  "
-format-connected-underline = #9f78e1
+;format-connected-underline = #ff0000
+format-connected-background = #50000000
+format-connected = " <ramp-signal> <label-connected> "
+;format-connected-underline = #9f78e1
 label-connected =
 
 format-disconnected = " no wifi :( "
@@ -197,9 +199,6 @@ format-disconnected-background = ${colors.background-unf}
 ;label-disconnected = %ifname% disconnected
 label-disconnected-foreground = ${colors.foreground-alt}
 
-format-packetloss = <animation-packetloss> <label-connected>
-
-
 ramp-signal-0 = "    0%"
 ramp-signal-1 = "    25%"
 ramp-signal-2 = "    50%"
@@ -207,19 +206,12 @@ ramp-signal-3 = "    75%"
 ramp-signal-4 = "    100%"
 ramp-signal-foreground = ${colors.foreground-alt}
 
-animation-packetloss-0 = ⚠
-animation-packetloss-0-foreground = #ffa64c
-animation-packetloss-1 = 📶
-animation-packetloss-1-foreground = #000000
-; Framerate in milliseconds
-animation-packetloss-framerate = 500
-
 [module/wired-network]
 type = internal/network
 interface = eno1
 interval = 3.0
 
-format-connected-underline = #55aa55
+;format-connected-underline = #55aa55
 format-connected-prefix = ""
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
@@ -241,9 +233,8 @@ date-alt = " %Y-%m-%d"
 time = "   %a %b %d     %I:%M %p  "
 time-alt = %H:%M:%S
 
-format-background = ${colors.background-alt}
+format-background = #50000000
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
 
 label = %date% %time%
 
@@ -256,31 +247,31 @@ sink = alsa_output.pci-0000_00_1f.3.analog-stereo
 
 ; Soundcard to be used
 ; Usually in the format hw:#
-master-soundcard = hw:1
-speaker-soundcard = hw:1
-headphone-soundcard = hw:1
+;master-soundcard = hw:1
+;speaker-soundcard = hw:1
+;headphone-soundcard = hw:1
 
 ; Name of the master mixer
 ; Default: Master
-master-mixer = Master
+;master-mixer = Master
 
 ; Optionally define speaker and headphone mixers
 ; Use the following command to list available mixer controls:
 ; $ amixer scontrols | sed -nr "s/.*'([[:alnum:]]+)'.*/\1/p"
 ; Default: none
-speaker-mixer = Speaker
+;speaker-mixer = Speaker
 ; Default: none
-headphone-mixer = Headphone
+;headphone-mixer = Headphone
 
 ; NOTE: This is required if headphone_mixer is defined
 ; Use the following command to list available device controls
 ; $ amixer controls | sed -r "/CARD/\!d; s/.*=([0-9]+).*name='([^']+)'.*/printf '%3.0f: %s\n' '\1' '\2'/e" | sort
 ; Default: none
 headphone-id = 9
-
+label-headphone = ""
 ; Use volume mapping (similar to amixer -M and alsamixer), where the increase in volume is linear to the ear
 ; Default: false
-mapped = true
+;mapped = true
 
 format-muted-background = ${colors.background-unf}
 format-volume-background = ${colors.background-alt}
@@ -299,15 +290,16 @@ type = internal/alsa
 
 format-volume = <label-volume> <ramp-volume>
 ;format-volume = <label-volume> <bar-volume>
-label-volume = 
+label-volume =
+;label-volume-padding = 4 
 format-foreground = ${colors.foreground-alt}
-format-volume-background = ${colors.background-alt}
+format-volume-background = #50000000
 format-muted-prefix = " "
-format-muted-background = ${colors.background-alt}
+format-muted-background = #50000000
 
 ;label-muted = 🔇 muted
 label-muted =  muted
-
+label-muted-foreground = ${colors.foreground-alt}
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
 bar-volume-foreground-1 = #55aa55
@@ -326,8 +318,9 @@ bar-volume-empty-font = 2
 bar-volume-empty-foreground = #ffffff
 
 ramp-volume-0 = 
+ramp-volume-0-foreground = ${colors.foreground-alt}
 ramp-volume-1 = 
-
+ramp-volume-1-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
@@ -335,20 +328,22 @@ battery = BAT0
 adapter = AC
 full-at = 97
 
-format-full-background = ${colors.background-mod2}
-format-charging-background = ${colors.background-mod1}
+format-full-background = #50000000
+format-charging-background = #5022c938
 format-charging = "⁣   <animation-charging> <label-charging>"
-format-charging-underline = #ffb52a
+format-charging-underline = #22c938
 
 format-charging-suffix = "   "
 
-format-discharging-background = ${colors.background-alt}
+format-discharging-background = #50000000
 format-discharging = "⁣  <ramp-capacity> <label-discharging>  "
-format-discharging-underline = ${self.format-charging-underline}
+;format-discharging-underline = ${self.format-charging-underline}
 
-format-full = 
+format-full = "" 
+format-full-padding = 2
+format-full-foreground = ${colors.foreground-alt}
 format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+format-full-underline = 
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -371,20 +366,25 @@ type = custom/menu
 
 format-spacing = 1
 
-label-open = "      "
-label-open-background = ${colors.background-mod1}
-label-open-foreground = ${colors.secondary}
+label-open = "     "
+label-open-background = #50000000
+;${colors.background-mod1}
+label-open-foreground = #ff0000
 label-close = "    cancel   "
-label-close-background = ${colors.background-mod2}
+label-close-background = #000000
+;${colors.background-mod2}
 label-close-foreground = ${colors.secondary}
 label-separator = " "
 label-separator-foreground = ${colors.foreground-alt}
 
 menu-0-0 = reboot
+menu-0-0-foreground = #1b9600
 menu-0-0-exec = menu-open-1
 menu-0-1 = "power-off"
+menu-0-1-foreground = #960a00
 menu-0-1-exec = menu-open-2
-menu-0-2 = "suspend"
+menu-0-2 = "suspend "
+menu-0-2-foreground = #bc7801
 menu-0-2-exec = menu-open-3
 
 menu-1-0 = cancel
@@ -404,8 +404,8 @@ menu-3-1-exec = menu-open-0
 
 [settings]
 screenchange-reload = true
-compositing-background = xor
-;compositing-background = screen
+;compositing-background = xor
+compositing-background = screen
 compositing-foreground = source
 compositing-border = over
 
@@ -483,5 +483,63 @@ format-underline = #f90000
 ;format-underline = #4bffdc
 ;label = %percentage_used%%
 
+[bar/bottom]
+monitor = ${env:MONITOR:}
+bottom = true
+width = 100%
+height = 23
+offset-x = 0%
+;offset-y = 10%
+radius = 0.0
+fixed-center = true
+
+;background = #000
+;foreground = ${colors.foreground}
+background = #50000000
+foreground = #f9f9f9
+
+line-size = 3
+line-color = #f00
+
+border-size = 0
+border-color = #00000000
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = Misc Termsyn:size=8;1
+;font-0 = Ubuntu:size=10;1
+font-1 = FontAwesome:fontformat=truetype:size=12;1
+font-3 = Font Awesome 5 Free:style=Regular:pixelsize=8;1
+font-4 = Font Awesome 5 Free:style=Solid:pixelsize=8;1
+font-5 = Font Awesome 5 Brands:pixelsize=8;1
+font-2 = sm4tik:pixelsize=10;1
+
+
+modules-left = i3
+;modules-center =  date weather
+;modules-right = alsa cpu wireless-network battery powermenu
+tray-position = left
+;tray-padding = 2
+;tray-transparent = true
+;tray-offset-y = 22
+;tray-offset-x = -0
+;tray-maxsize = 18
+;tray-detached = false
+;tray-background = #ff0000
+
+;wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
 ; vim:ft=dosini
 
