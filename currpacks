@@ -790,6 +790,7 @@ hping3.x86_64
 hplip.x86_64
 hplip-common.x86_64
 hplip-libs.x86_64
+htop.x86_64
 http-parser.x86_64
 httpd.x86_64
 httpd-filesystem.noarch
@@ -1127,6 +1128,8 @@ libiscsi.x86_64
 libjpeg-turbo.x86_64
 libkadm5.x86_64
 libkate.x86_64
+libkcapi.x86_64
+libkcapi-hmaccalc.x86_64
 libkkc.x86_64
 libkkc-common.noarch
 libkkc-data.x86_64
@@ -1579,6 +1582,7 @@ openblas-devel.x86_64
 openblas-openmp.x86_64
 openblas-openmp64.x86_64
 openblas-openmp64_.x86_64
+openblas-serial.x86_64
 openblas-serial64.x86_64
 openblas-serial64_.x86_64
 openblas-srpm-macros.noarch
