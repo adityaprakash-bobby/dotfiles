@@ -35,7 +35,7 @@ fixed-center = true
 
 ;background = #000
 ;foreground = ${colors.foreground}
-background = #50000000
+background = #80000000
 foreground = #f9f9f9
 
 line-size = 3 
@@ -89,7 +89,7 @@ scroll-down = i3wm-wsprev
 type = custom/script
 interval = 60
 
-format-background = #50000000
+format-background = #80000000
 format = <label>
 format-prefix = "    "
 format-suffix = "   "
@@ -119,7 +119,7 @@ strip-wsnumbers = true
 ;label-unfocused-padding = 3
 ;
 ;label-focused-background = ${colors.background-alt}
-label-unfocused-background = #50000000
+label-unfocused-background = #80000000
 ;${colors.background-unf}
 ;
 ;label-mode-padding = 0
@@ -144,7 +144,7 @@ label-mode-background = #e60053
 ; Default: %icon%  %name%
 label-focused = %name%
 label-focused-foreground = #ffffff
-label-focused-background = #5058b1dd
+label-focused-background = #8058b1dd
 label-focused-underline = #58b1dd
 label-focused-padding = 4
 
@@ -173,7 +173,7 @@ label-visible-padding = 4
 ; Default: %icon%  %name%
 label-urgent = %name%
 label-urgent-foreground = #ffffff
-label-urgent-background = #50f9bd68
+label-urgent-background = #80f9bd68
 label-urgent-underline = #ffb449
 label-urgent-padding = 4
 
@@ -188,13 +188,13 @@ interval = 3.0
 format-connected-prefix = " "
 
 ;format-connected-underline = #ff0000
-format-connected-background = #50000000
+format-connected-background = #80000000
 format-connected = " <ramp-signal> <label-connected> "
 ;format-connected-underline = #9f78e1
 label-connected =
 
 format-disconnected = " no wifi :( "
-format-disconnected-background = ${colors.background-unf}
+format-disconnected-background = #80000000
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
 label-disconnected-foreground = ${colors.foreground-alt}
@@ -233,7 +233,7 @@ date-alt = " %Y-%m-%d"
 time = "   %a %b %d     %I:%M %p  "
 time-alt = %H:%M:%S
 
-format-background = #50000000
+format-background = #80000000
 format-prefix-foreground = ${colors.foreground-alt}
 
 label = %date% %time%
@@ -293,9 +293,9 @@ format-volume = <label-volume> <ramp-volume>
 label-volume =
 ;label-volume-padding = 4 
 format-foreground = ${colors.foreground-alt}
-format-volume-background = #50000000
+format-volume-background = #80000000
 format-muted-prefix = " "
-format-muted-background = #50000000
+format-muted-background = #80000000
 
 ;label-muted = 🔇 muted
 label-muted =  muted
@@ -328,14 +328,14 @@ battery = BAT0
 adapter = AC
 full-at = 97
 
-format-full-background = #50000000
-format-charging-background = #5022c938
+format-full-background = #80000000
+format-charging-background = #8022c938
 format-charging = "⁣   <animation-charging> <label-charging>"
 format-charging-underline = #22c938
 
 format-charging-suffix = "   "
 
-format-discharging-background = #50000000
+format-discharging-background = #80000000
 format-discharging = "⁣  <ramp-capacity> <label-discharging>  "
 ;format-discharging-underline = ${self.format-charging-underline}
 
@@ -367,7 +367,7 @@ type = custom/menu
 format-spacing = 1
 
 label-open = "     "
-label-open-background = #50000000
+label-open-background = #80000000
 ;${colors.background-mod1}
 label-open-foreground = #ff0000
 label-close = "    cancel   "
@@ -495,7 +495,7 @@ fixed-center = true
 
 ;background = #000
 ;foreground = ${colors.foreground}
-background = #50000000
+background = #80000000
 foreground = #f9f9f9
 
 line-size = 3
@@ -507,8 +507,8 @@ border-color = #00000000
 padding-left = 0
 padding-right = 0
 
-module-margin-left = 0
-module-margin-right = 0
+;module-margin-left = 0
+;module-margin-right = 0
 
 font-0 = Misc Termsyn:size=8;1
 ;font-0 = Ubuntu:size=10;1
@@ -523,13 +523,13 @@ modules-left = i3
 ;modules-center =  date weather
 ;modules-right = alsa cpu wireless-network battery powermenu
 tray-position = left
-;tray-padding = 2
-;tray-transparent = true
+tray-padding = 4
+tray-transparent = true
 ;tray-offset-y = 22
 ;tray-offset-x = -0
-;tray-maxsize = 18
-;tray-detached = false
-;tray-background = #ff0000
+tray-maxsize = 18
+tray-detached = false
+tray-background = #00000000
 
 ;wm-restack = bspwm
 ;wm-restack = i3
