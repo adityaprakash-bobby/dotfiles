@@ -62,7 +62,7 @@ font-2 = sm4tik:pixelsize=10;1
 modules-left = i3 
 ;music
 modules-center =  date weather
-modules-right = alsa cpu wireless-network battery powermenu
+modules-right = alsa wireless-network battery powermenu
 
 ;tray-position = left
 ;tray-padding = 2
@@ -300,6 +300,9 @@ format-muted-background = #80000000
 ;label-muted = 🔇 muted
 label-muted =  muted
 label-muted-foreground = ${colors.foreground-alt}
+headphone-id = 15
+;label-headphone = ""
+
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
 bar-volume-foreground-1 = #55aa55
@@ -322,6 +325,9 @@ ramp-volume-0-foreground = ${colors.foreground-alt}
 ramp-volume-1 = 
 ramp-volume-1-foreground = ${colors.foreground-alt}
 
+ramp-headphones-0 = 
+ramp-headphones-1 = 
+
 [module/battery]
 type = internal/battery
 battery = BAT0
@@ -330,7 +336,7 @@ full-at = 97
 
 format-full-background = #80000000
 format-charging-background = #8022c938
-format-charging = "⁣   <animation-charging> <label-charging>"
+format-charging = "⁣ <animation-charging> <label-charging>"
 format-charging-underline = #22c938
 
 format-charging-suffix = "   "
@@ -469,9 +475,9 @@ margin-bottom = 5
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-background = ${colors.foreground-mod}
+format-prefix-background = #80000000
 format-underline = #f90000
 ;label = %percentage%%
 ;
@@ -519,7 +525,7 @@ font-5 = Font Awesome 5 Brands:pixelsize=8;1
 font-2 = sm4tik:pixelsize=10;1
 
 
-modules-left = i3
+modules-right = cpu
 ;modules-center =  date weather
 ;modules-right = alsa cpu wireless-network battery powermenu
 tray-position = left

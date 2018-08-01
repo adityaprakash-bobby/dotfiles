@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME=""
+ZSH_THEME="agnoster"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -58,7 +58,7 @@ ZSH_THEME=""
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=( git vim vi-mode fedora yum python nmap)
+plugins=(github git vim vi-mode fedora yum python nmap)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -91,6 +91,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# aliases
 alias nml="nmap localhost"
+alias dotup="~/gawk_scripts/updaterepos.sh"
+alias nmwifi="nmcli device wifi connect"
+alias nmlist="nmcli device wifi list"
