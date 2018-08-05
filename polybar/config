@@ -50,7 +50,8 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = San Francisco:fontformat=truetype:size= 9;1
+;font-0 = San Francisco:fontformat=truetype:size= 9;1
+font-0 = DejaVu Sans Mono:size=8;1
 ;font-0 = Misc Termsyn:size=8;1
 ;font-0 = Ubuntu:size=10;1
 font-1 = FontAwesome:fontformat=truetype:size=12;1
@@ -92,8 +93,8 @@ interval = 60
 
 format-background = #cc000000
 format = <label>
-format-prefix = "    "
-format-suffix = "   "
+format-prefix = "  "
+format-suffix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 exec = python3 ~/.config/polybar/weather.py
 
@@ -147,7 +148,7 @@ label-focused = %name%
 label-focused-foreground = #ffffff
 label-focused-background = #8058b1dd
 label-focused-underline = #58b1dd
-label-focused-padding = 4
+label-focused-padding = 2
 
 ; Available tokens:
 ;   %name%
@@ -155,7 +156,7 @@ label-focused-padding = 4
 ;   %index%
 ; Default: %icon%  %name%
 label-unfocused = %name%
-label-unfocused-padding = 4
+label-unfocused-padding = 2
 
 ; Available tokens:
 ;   %name%
@@ -165,7 +166,7 @@ label-unfocused-padding = 4
 label-visible = %name%
 label-visible-underline = #39aad3
 ;#555555
-label-visible-padding = 4
+label-visible-padding = 2
 
 ; Available tokens:
 ;   %name%
@@ -176,7 +177,7 @@ label-urgent = %name%
 label-urgent-foreground = #ffffff
 label-urgent-background = #ccf9bd68
 label-urgent-underline = #ffb449
-label-urgent-padding = 4
+label-urgent-padding = 2
 
 
 
@@ -186,7 +187,7 @@ type = internal/network
 interface = wlo1
 interval = 3.0
 
-format-connected-prefix = "   "
+format-connected-prefix = "  "
 
 ;format-connected-underline = #ff0000
 format-connected-background = #cc000000
@@ -232,7 +233,7 @@ interval = 5
 date = 
 date-alt = " %Y-%m-%d"
 
-time = "   %a %b %d     %I:%M %p  "
+time = "  %a %b %d   %I:%M %p "
 time-alt = %H:%M:%S
 
 format-background = #cc000000
@@ -344,7 +345,7 @@ format-charging-background = #8022c938
 format-charging = "⁣ <animation-charging> <label-charging>"
 format-charging-underline = #22c938
 
-format-charging-suffix = "   "
+format-charging-suffix = " "
 
 format-discharging-background = #cc000000
 format-discharging = "⁣  <ramp-capacity> <label-discharging>  "
@@ -377,15 +378,15 @@ type = custom/menu
 
 format-spacing = 1
 
-label-open = "     "
+label-open = "    "
 label-open-background = #cc000000
 ;${colors.background-mod1}
 label-open-foreground = #ff0000
-label-close = "    cancel   "
+label-close = "  cancel"
 label-close-background = #000000
 ;${colors.background-mod2}
 label-close-foreground = ${colors.secondary}
-label-separator = " "
+label-separator = "|"
 label-separator-foreground = ${colors.foreground-alt}
 
 menu-0-0 = reboot
@@ -419,9 +420,9 @@ type = internal/memory
 format = <label> <bar-used>
 format-padding = 2
 label = 
-label-font = 2
+label-font = 1
 
-bar-used-width = 14
+bar-used-width = 20
 bar-used-indicator = |
 bar-used-indicator-foreground = #00ff00
 bar-used-fill = ─
@@ -433,7 +434,7 @@ bar-used-foreground-4 = #55aa55
 bar-used-foreground-5 = #f0a70a
 bar-used-foreground-6 = #ff5555
 bar-used-empty = ─
-bar-used-empty-font = 2
+bar-used-empty-font = 1
 bar-used-empty-foreground = #ffffff
 
 [settings]
@@ -441,15 +442,14 @@ screenchange-reload = true
 ;compositing-background = xor
 compositing-background = screen
 compositing-foreground = source
-compositing-border = over
+;compositing-border = over
 
 
 [global/wm]
 margin-top = 5
 margin-bottom = 5
 
-
-; 
+ 
 ; [module/xkeyboard]
 ; type = internal/xkeyboard
 ; blacklist-0 = num lock
@@ -465,7 +465,8 @@ margin-bottom = 5
 ; label-indicator-margin = 1
 ; label-indicator-background = ${colors.secondary}
 ; label-indicator-underline = ${colors.secondary}
-; 
+
+ 
 ; [module/filesystem]
 ; type = internal/fs
 ; interval = 25
@@ -475,8 +476,8 @@ margin-bottom = 5
 ; label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 ; label-unmounted = %mountpoint% not mounted
 ; label-unmounted-foreground = ${colors.foreground-alt}
-; 
-;
+ 
+
 [module/xbacklight]
 type = internal/xbacklight
 
@@ -502,32 +503,32 @@ interval = 0.5
 format = <label> <ramp-coreload>
 
 label = 
-label-font = 3
+label-font = 1
 label-foreground = ${colors.foreground-alt}
 
 ramp-coreload-0 = ▁
-ramp-coreload-0-font = 2
+ramp-coreload-0-font = 1
 ramp-coreload-0-foreground = #55aa55
 ramp-coreload-1 = ▂
-ramp-coreload-1-font = 2
+ramp-coreload-1-font = 1
 ramp-coreload-1-foreground = #55aa55
 ramp-coreload-2 = ▃
-ramp-coreload-2-font = 2
+ramp-coreload-2-font = 1
 ramp-coreload-2-foreground = #55aa55
 ramp-coreload-3 = ▄
-ramp-coreload-3-font = 2
+ramp-coreload-3-font = 1
 ramp-coreload-3-foreground = #55aa55
 ramp-coreload-4 = ▅
-ramp-coreload-4-font = 2
+ramp-coreload-4-font = 1
 ramp-coreload-4-foreground = #fba922
 ramp-coreload-5 = ▆
-ramp-coreload-5-font = 2
+ramp-coreload-5-font = 1
 ramp-coreload-5-foreground = #fba922
 ramp-coreload-6 = ▇
-ramp-coreload-6-font = 2
+ramp-coreload-6-font = 1
 ramp-coreload-6-foreground = #ff5555
 ramp-coreload-7 = █
-ramp-coreload-7-font = 2
+ramp-coreload-7-font = 1
 ramp-coreload-7-foreground = #ff5555
 
 [bar/bottom]
@@ -557,13 +558,15 @@ padding-right = 0
 ;module-margin-left = 0
 ;module-margin-right = 0
 
-font-0 = Misc Termsyn:size=8;1
+;font-0 = San Francisco:fontformat=truetype:size= 9;1
+font-0 = DejaVu Sans Mono:size=8;1
+;font-0 = Misc Termsyn:size=8;1
 ;font-0 = Ubuntu:size=10;1
 font-1 = FontAwesome:fontformat=truetype:size=12;1
-font-3 = Font Awesome 5 Free:style=Regular:pixelsize=8;1
-font-4 = Font Awesome 5 Free:style=Solid:pixelsize=8;1
-font-5 = Font Awesome 5 Brands:pixelsize=8;1
-font-2 = sm4tik:pixelsize=10;1
+font-2 = Font Awesome 5 Free:style=Regular:pixelsize=8;1
+font-3 = Font Awesome 5 Free:style=Solid:pixelsize=8;1
+font-4 = Font Awesome 5 Brands:pixelsize=8;1
+font-5 = sm4tik:pixelsize=10;1
 
 
 ;modules-right = cpu
