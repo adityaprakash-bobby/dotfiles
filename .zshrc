@@ -92,6 +92,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias nml="nmap localhost"
-alias dotup="~/gawk_scripts/updaterepos.sh"
+alias dotup="~/Scripts/updaterepos.sh"
 alias nmwifi="nmcli device wifi connect"
 alias nmlist="nmcli device wifi list"
+alias mkscript="~/Scripts/mkscript.sh"
