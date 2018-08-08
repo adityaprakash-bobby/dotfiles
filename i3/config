@@ -59,7 +59,8 @@ bindsym $mod+d exec rofi -show run
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-
+exec --no-startup-id nm-applet
+exec --no-startup-id pamac-tray
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -222,7 +223,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #}
 
 #set wallpaper
-exec --no-startup-id feh --bg-scale $HOME/Pictures/Wallpapers/alena-aenami-003-1.jpg
+exec --no-startup-id feh --bg-scale $HOME/Pictures/Wallpapers/alena-aenami-castle2k.jpg
 
 #execute conky
 #exec --no-startup-id conky -c /home/aditya/.conkyrc
@@ -237,6 +238,12 @@ bindsym XF86MonBrightnessDown exec light -U 5
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+ unmute
 bindsym XF86AudioLowerVolume  exec amixer -q sset Master 5%- unmute
 bindsym XF86AudioMute exec amixer -q sset Master toggle
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 #screenshot
 bindsym --release Print exec scrot '/home/aditya/Pictures/Screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'
