@@ -96,3 +96,5 @@ alias dotup="~/Scripts/updaterepos.sh"
 alias nmwifi="nmcli device wifi connect"
 alias nmlist="nmcli device wifi list"
 alias mkscript="~/Scripts/mkscript.sh"
+
+eval $(thefuck --alias)
