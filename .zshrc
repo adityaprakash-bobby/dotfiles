@@ -98,3 +98,27 @@ alias nmlist="nmcli device wifi list"
 alias mkscript="~/Scripts/mkscript.sh"
 
 eval $(thefuck --alias)
+
+# User functions
+# Change the DNS to use Google's or Cloudflare's
+function chdns {
+
+        if [[ -z $1 ]] || [[ -n $2 ]]; then
+
+                echo "Usage: chdns [OPTION]"
+                echo "Options:"
+                echo "g|google - Set Google DNS"
+                echo "c|cloudflare - Set Cloudflare DNS"
+
+        elif [[ -n $1 ]]; then
+
+                if [[ "$1" == "g" ]] || [[ "$1" == "google" ]]; then
+                        nmcli device modify wlo1 ipv4.dns 8.8.8.8,8.8.4.4
+                elif [[ "$1" == "c" ]] || [[ "$1" == "clouflare" ]]; then
+                        nmcli device modify wlo1 ipv4.dns 1.1.1.1
+                else
+                        echo "Error: Choose a valid option"     
+                fi
+
+        fi
+}
