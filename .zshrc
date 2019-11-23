@@ -115,7 +115,7 @@ function chdns {
                 if [[ "$1" == "g" ]] || [[ "$1" == "google" ]]; then
                         nmcli device modify wlo1 ipv4.dns 8.8.8.8,8.8.4.4
                 elif [[ "$1" == "c" ]] || [[ "$1" == "clouflare" ]]; then
-                        nmcli device modify wlo1 ipv4.dns 1.1.1.1
+                        nmcli device modify wlo1 ipv4.dns 1.1.1.1,1.0.0.1
                 else
                         echo "Error: Choose a valid option"     
                 fi
