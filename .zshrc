@@ -111,11 +111,15 @@ function chdns {
                 echo "c|cloudflare - Set Cloudflare DNS"
 
         elif [[ -n $1 ]]; then
-
+        
                 if [[ "$1" == "g" ]] || [[ "$1" == "google" ]]; then
                         nmcli device modify wlo1 ipv4.dns 8.8.8.8,8.8.4.4
                 elif [[ "$1" == "c" ]] || [[ "$1" == "clouflare" ]]; then
                         nmcli device modify wlo1 ipv4.dns 1.1.1.1,1.0.0.1
+                elif [[ "$1" == "o" ]] || [[ "$1" == "opendns" ]]; then
+                        nmcli device modify wlo1 ipv4.dns 208.67.222.222,208.67.220.220
+                elif [[ "$1" == "n" ]] || [[ "$1" == "norton" ]]; then
+                        nmcli device modify wlo1 ipv4.dns 199.85.126.10,199.85.127.10
                 else
                         echo "Error: Choose a valid option"     
                 fi
