@@ -107,8 +107,10 @@ function chdns {
 
                 echo "Usage: chdns [OPTION]"
                 echo "Options:"
-                echo "g|google - Set Google DNS"
-                echo "c|cloudflare - Set Cloudflare DNS"
+                echo -e "\tg|google - Set Google DNS"
+                echo -e "\tc|cloudflare - Set Cloudflare DNS"
+                echo -e "\to|opendns - Set OpenDNS DNS"
+                echo -e "\tn|norton - Set Norton Netconnect DNS"
 
         elif [[ -n $1 ]]; then
         
