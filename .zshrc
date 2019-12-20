@@ -128,3 +128,11 @@ function chdns {
 
         fi
 }
+
+# load completions
+if [[ -d $HOME/.config/completions ]]; then
+  completion_scripts=$(ls $HOME/.config/completions)
+  for i in ${completion_scripts[@]}; do
+    . $HOME/.config/completions/$i
+  done
+fi
